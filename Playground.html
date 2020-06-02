@@ -19,43 +19,46 @@
                 <div class="row">
                     <div class="col-12 left-top text-center">
                         <form action="post" class="DiceForm m-auto">
+                            <label for="DiceType">Dice type</label>
                             <div class="row">
-                                <div class="col-sm-12 col-md-12 col-lg-12">
-                                    <div class="form-group">
-                                        <label for="DiceType">Dice type</label>
+
+                                    <div class="col-sm-12 col-md-12 col-lg-6 form-group">
                                         <select name="diceType" id="DiceType" class="form-control" required>
-                                            <option value="K2">K2</option>
-                                            <option value="K4">K4</option>
-                                            <option value="K6">K6</option>
-                                            <option value="K8">K8</option>
-                                            <option value="K10">K10</option>
-                                            <option value="K12">K12</option>
-                                            <option value="K20">K20</option>
-                                            <option value="K100">K100</option>
+                                            <option value="2">K2</option>
+                                            <option value="4">K4</option>
+                                            <option value="6">K6</option>
+                                            <option value="8">K8</option>
+                                            <option value="10">K10</option>
+                                            <option value="12">K12</option>
+                                            <option value="20">K20</option>
+                                            <option value="100">K100</option>
                                         </select>
                                     </div>
-                                </div>
-                                <div class="col-sm-12 col-md-12 col-lg-12">
-                                    <div class="form-group">
-                                        <label for="AmountOfDice">Amount Of Dice</label>
-                                        <input type="number" class="form-control" required min="1" max="10">
+                                    <div class="col-sm-12 col-md-12 col-lg-6 form-group">
+                                        <select name="diceAmount" id="diceAmount" class="diceAmount form-control" required>
+                                            <option value="1">x1</option>
+                                            <option value="2">x2</option>
+                                            <option value="3">x3</option>
+                                            <option value="4">x4</option>
+                                            <option value="5">x5</option>
+                                        </select>
                                     </div>
-                                </div>
+
                             </div>
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 col-lg-12">
                                     <div class="form-group">
                                         <label for="Modificator">Modificator</label>
-                                        <input type="number" class="form-control" required min="-50" max="50">
+                                        <input type="number" class="modificator form-control" required min="-50" max="50" value="0">
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-12 col-lg-12">
                                     <div class="form-group">
                                         <label for="Test">Test</label>
-                                        <select name="Test" id="Test" class="form-control" required>
-                                            <option value="None">None</option>
+                                        <select name="Test" id="Test" class="test form-control" required>
+                                            <option value="None" selected>None</option>
                                             <option value="Attack">Attack WS</option>
-                                            <option value="Attack">Shot BS</option>
+                                            <option value="Shot">Shot BS</option>
                                             <option value="Deffence">Dodge WS</option>
                                             <option value="Gossip">Gossip WP</option>
                                             <option value="Perceptivity">Perceptivity INT</option>
@@ -68,8 +71,8 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col">
-                                    <button type="button" class="btn btn-outline-dark">Roll the dice!</button>
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <button type="button" class="go btn btn-outline-dark">Roll the dice!</button>
                                 </div>
                             </div>
                         </form>
@@ -78,8 +81,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 DYSPLAY-1 left-bottom">
-                        <p>TUTAJ BĘDZIE WYNIK RZUTU KOŚCIĄ</p>
-                        <P>KTO => TEST => REZULTAT </P>
+                        <div id="result" class="h5 result-all"><strong>result of rolling the dice</strong></div>
                     </div>
                 </div>
             </div>
@@ -87,18 +89,10 @@
                 <div class="row">
                     <div class="right-player">
                         <table class="col-sm-12 col-md-12 col-lg-12">
-                            <thead>Player</thead>
+                            <thead>
+                                <h1 class="DYSPLAY-1">Hero Name</h1>
+                            </thead>
                             <tbody>
-                            <th>
-                                <td>
-                                <select name="Player" id="Player" class="form-control">
-                                    <option value="Player1">Player1</option>
-                                    <option value="Player2">Player2</option>
-                                    <option value="Player3">Player3</option>
-                                    <option value="Player4">Player4</option>
-                                </select>
-                                </td>
-                            </th>
                             <tr>
                                 <td>
                                     Gender: 
@@ -170,19 +164,19 @@
                                     <th scope="col" title="Toughness">T</th>
                                     <th scope="col" title="Agility">AG</th>
                                     <th scope="col" title="Intelligence">INT</th>
-                                    <th scope="col" title="Will Oiwer">WP</th>
+                                    <th scope="col" title="Will Power">WP</th>
                                     <th scope="col" title="Fellowship">FEL</th>
                                 </tr>
                                 <tr>
                                     <th scope="row">Base</th>
-                                    <td scope="col"></td>
-                                    <td scope="col"></td>
-                                    <td scope="col"></td>
-                                    <td scope="col"></td>
-                                    <td scope="col"></td>
-                                    <td scope="col"></td>
-                                    <td scope="col"></td>
-                                    <td scope="col"></td>
+                                    <td scope="col" class="WS">50</td>
+                                    <td scope="col" class="BS">50</td>
+                                    <td scope="col" class="S">50</td>
+                                    <td scope="col" class="T">50</td>
+                                    <td scope="col" class="AG">50</td>
+                                    <td scope="col" class="INT">50</td>
+                                    <td scope="col" class="WP">50</td>
+                                    <td scope="col" class="FEL">50</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -237,6 +231,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+    <script src="/JavaScript/Playground.js"></script>
 </body>
 
 </html>

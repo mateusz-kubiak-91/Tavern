@@ -14,13 +14,16 @@ body {
 }
 
 .left-top {
-  height: 45vh;
+  height: 45%;
   width: 100vw;
 }
 
 .left-bottom {
-  height: 55vh;
+  overflow-y: scroll;
+  top: 20px;
+  height: 55%;
   width: 100vw;
+  text-align: center;
 }
 
 .right-player {
