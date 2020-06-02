@@ -14,14 +14,13 @@ body {
 }
 
 .left-top {
-  height: 45%;
+  height: 45vh;
   width: 100vw;
 }
 
 .left-bottom {
   overflow-y: scroll;
-  top: 20px;
-  height: 55%;
+  height: 50vh;
   width: 100vw;
   text-align: center;
 }

@@ -33,123 +33,122 @@ const diceAmount = document.querySelector('.diceAmount');
     return fRes;
   }
 
-  function newResult () {
-    const throwResult = throwIt();
+  function newResult (msg, color) {
     const newEl = document.createElement('span');
-    
-    newEl.innerText = throwResult;
+    newEl.innerText = msg;
     newEl.classList.add('single-result');
+    newEl.style.color = color;
     rAll.appendChild(newEl);
-    return throwResult;
   }
 
 goBtn.addEventListener('click', function() {
-  const diceResult = newResult();
+  const diceResult = throwIt();
   const modificationValue = modif.value;
   const testType = test.value;
   const okColor = 'green';
   const nokColor = 'red';
-  
+
   console.log(`Dice Result: ${diceResult}`);
   console.log(`Dice Amount: ${diceAmount.value}`)
   console.log(`Modification Value: ${modificationValue}`);
   console.log(`Test Type: ${testType}`);
 
+  const resultMsg = `Test: ${testType} \n Modificator: ${modificationValue} \n Result: ${diceResult + parseInt(modificationValue)} \n ----- \n`;
+  let currentColor = 'black';
+
   switch (test.value) {
     case 'Attack':
-      rAll.innerText = (`Test: ${testType} \n Modificator: ${modificationValue} \n Result: ${diceResult + parseInt(modificationValue)} \n`);
       if ((diceResult + parseInt(modificationValue)) <= weponSkill.innerText) {
-        document.getElementById('result').style.color = okColor;
         console.log('Atak udany');
+        currentColor = okColor;
       } else {
-        document.getElementById('result').style.color = nokColor;
         console.log('Atak nie udany');
+        currentColor = nokColor;
       }
+      newResult(resultMsg, currentColor);
     break;
     case 'Shot':
-      rAll.innerText = (`Test: ${testType} \n Modificator: ${modificationValue} \n Result: ${diceResult + parseInt(modificationValue)} \n`);
       if ((diceResult + parseInt(modificationValue)) <= ballisticSkill.innerText) {
-        document.getElementById('result').style.color = okColor;
+        currentColor = okColor;
         console.log('strzał udany');
       } else {
-        document.getElementById('result').style.color = nokColor;
+        currentColor = nokColor;
         console.log('strzał nie udany');
       }
-    break;
+      newResult(resultMsg, currentColor);
+      break;
     case 'Deffence':
-      rAll.innerText = (`Test: ${testType} \n Modificator: ${modificationValue} \n Result: ${diceResult + parseInt(modificationValue)} \n`);
       if ((diceResult + parseInt(modificationValue)) <= weponSkill.innerText) {
-        document.getElementById('result').style.color = okColor;
+        currentColor = okColor;
         console.log('Unik udany');
       } else {
-        document.getElementById('result').style.color = nokColor;
+        currentColor = nokColor;
         console.log('Unik nie udany');
       }
-    break;
+      newResult(resultMsg, currentColor);
+      break;
     case 'Gossip':
-      rAll.innerText = (`Test: ${testType} \n Modificator: ${modificationValue} \n Result: ${diceResult + parseInt(modificationValue)} \n`);
       if ((diceResult + parseInt(modificationValue)) <= willPower.innerText) {
-        document.getElementById('result').style.color = okColor;
+        currentColor = okColor;
         console.log('Plotkowanie udany');
       } else {
-        document.getElementById('result').style.color = nokColor;
+        currentColor = nokColor;
         console.log('Plotkowanie nie udany');
       }
-    break;
+      newResult(resultMsg, currentColor);
+      break;
     case 'Perceptivity':
-      rAll.innerText = (`Test: ${testType} \n Modificator: ${modificationValue} \n Result: ${diceResult + parseInt(modificationValue)} \n`);
       if ((diceResult + parseInt(modificationValue)) <= intelligence.innerText) {
-        document.getElementById('result').style.color = okColor;
+        currentColor = okColor;
         console.log('Spostrzegawczość udany');
       } else {
-        document.getElementById('result').style.color = nokColor;
+        currentColor = nokColor;
         console.log('Spostrzegawczość nie udany');
       }
-    break;
+      newResult(resultMsg, currentColor);
+      break;
     case 'Intimidation':
-      rAll.innerText = (`Test: ${testType} \n Modificator: ${modificationValue} \n Result: ${diceResult + parseInt(modificationValue)} \n`);
       if ((diceResult + parseInt(modificationValue)) <= strength.innerText) {
-        document.getElementById('result').style.color = okColor;
+        currentColor = okColor;
         console.log('Zastraszanie udany');
       } else {
-        document.getElementById('result').style.color = nokColor;
+        currentColor = nokColor;
         console.log('Zastraszanie nie udany');
       }
-    break;
+      newResult(resultMsg, currentColor);
+      break;
     case 'Drinking God':
-      rAll.innerText = (`Test: ${testType} \n Modificator: ${modificationValue} \n Result: ${diceResult + parseInt(modificationValue)} \n`);
       if ((diceResult + parseInt(modificationValue)) <= toughness.innerText) {
-        document.getElementById('result').style.color = okColor;
+        currentColor = okColor;
         console.log('Mocna głowa udany');
       } else {
-        document.getElementById('result').style.color = nokColor;
+        currentColor = nokColor;
         console.log('Mocna głowa nie udany');
       }
-    break;
+      newResult(resultMsg, currentColor);
+      break;
     case 'Sneaking':
-      rAll.innerText = (`Test: ${testType} \n Modificator: ${modificationValue} \n Result: ${diceResult + parseInt(modificationValue)} \n`);
       if ((diceResult + parseInt(modificationValue)) <= agility.innerText) {
-        document.getElementById('result').style.color = okColor;
+        currentColor = okColor;
         console.log('Skradanie się udany');
       } else {
-        document.getElementById('result').style.color = nokColor;
+        currentColor = nokColor;
         console.log('Skradanie się nie udany');
       }
-    break;
+      newResult(resultMsg, currentColor);
+      break;
     case 'Bargain':
-      rAll.innerText = (`Test: ${testType} \n Modificator: ${modificationValue} \n Result: ${diceResult + parseInt(modificationValue)} \n`);
       if ((diceResult + parseInt(modificationValue)) <= fellowship.innerText) {
-        document.getElementById('result').style.color = okColor;
+        currentColor = okColor;
         console.log('Targowanie się udany');
       } else {
-        document.getElementById('result').style.color = nokColor;
+        currentColor = nokColor;
         console.log('Targowanie nie udany');
       }
-    break;
+      newResult(resultMsg, currentColor);
+      break;
     case 'None':
       {
-        rAll.innerText = (`Test: ${testType} \n Modificator: ${modificationValue} \n Result: ${diceResult + parseInt(modificationValue)} \n`);
-        document.getElementById('result').style.color='black';
         console.log('Test');
       }
     break;

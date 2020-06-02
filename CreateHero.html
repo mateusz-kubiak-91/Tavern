@@ -16,7 +16,7 @@
             <div class="row p-2">
                 <div class="col-12">
                     <label for="Test">Name</label>
-                    <input type="text"class="form-control" required min="2" max="20">
+                    <input type="text"class="form-control" placeholder="Set hero name!" required min="2" max="20">
                 </div>
             </div>
             <div class="row p-2">
@@ -29,7 +29,7 @@
                 </div>
                 <div class="col-sm-12 col-md-3 col-lg-3">
                     <label for="Test">Race</label>
-                    <select name="Race" id="Race" class="form-control" required>
+                    <select name="Race" id="Race" class="form-control race" required>
                         <option value="Human">Human</option>
                         <option value="Elf">Elf</option>       
                         <option value="Dwarf">Dwarf</option>       
@@ -54,7 +54,7 @@
             </div>
             <div class="row p-2">
                 <div class="col-sm-12 col-md-6 col-lg-6 p-4">
-                    <table>
+                    <table class="col">
                         <thead>
                             <p>Equipment</p>
                         </thead>
@@ -133,7 +133,7 @@
                     </table>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 p-4">
-                    <table>
+                    <table  class="col">
                         <thead>
                             <p>Skills</p>
                         </thead>
@@ -214,7 +214,7 @@
             </div>
             <div class="row p-2">
                 <div class="col-sm-12 col-md-12 col-lg-6">
-                    <table class="table table-dark table-striped table-borderless table-hover table-sm">
+                    <table class="col text-center table table-dark table-striped table-borderless table-hover table-sm">
                         <thead>
                             <tr>
                                 <th scope="row" colspan="9">Statistic</th>
@@ -234,20 +234,20 @@
                             </tr>
                             <tr>
                                 <th scope="row">Base</th>
-                                <td scope="col"></td>
-                                <td scope="col"></td>
-                                <td scope="col"></td>
-                                <td scope="col"></td>
-                                <td scope="col"></td>
-                                <td scope="col"></td>
-                                <td scope="col"></td>
-                                <td scope="col"></td>
+                                <td scope="col" class="WS"></td>
+                                <td scope="col" class="BS"></td>
+                                <td scope="col" class="S"></td>
+                                <td scope="col" class="T"></td>
+                                <td scope="col" class="AG"></td>
+                                <td scope="col" class="INT"></td>
+                                <td scope="col" class="WP"></td>
+                                <td scope="col" class="FEL"></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-6">
-                    <table class="table table-dark table-striped table-borderless table-hover table-sm">
+                    <table class="table col text-center table-dark table-striped table-borderless table-hover table-sm">
                         <thead>
                             <tr>
                                 <th scope="row" colspan="9">Statistic</th>
@@ -267,14 +267,14 @@
                             </tr>
                             <tr>
                                 <th scope="row">Base</th>
-                                <td scope="col"></td>
-                                <td scope="col"></td>
-                                <td scope="col"></td>
-                                <td scope="col"></td>
-                                <td scope="col"></td>
-                                <td scope="col"></td>
-                                <td scope="col"></td>
-                                <td scope="col"></td>
+                                <td scope="col" class="A"></td>
+                                <td scope="col" class="W"></td>
+                                <td scope="col" class="SB"></td>
+                                <td scope="col" class="TB"></td>
+                                <td scope="col" class="M"></td>
+                                <td scope="col" class="MAG"></td>
+                                <td scope="col" class="IP"></td>
+                                <td scope="col" class="FP"></td>
                             </tr>
     
                         </tbody>
@@ -282,10 +282,13 @@
                 </div>
             </div>
             <div class="row p-2">
-                <div class="col-sm-6 col-md-12 col-lg-6 p-4">
-                    <button class="btn btn-info btn-block" type="submit">Random statistic</button>
+                <div class="col-sm-6 col-md-3 col-lg-2 p-4">
+                    <button class="btn btn-info btn-block" type="button">Go back!</button>
                 </div>
-                <div class="col-sm-6 col-md-12 col-lg-6 p-4">
+                <div class="col-sm-6 col-md-4 col-lg-5 p-4">
+                    <button class="btn btn-info btn-block run" type="button">Random statistic</button>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-5 p-4">
                     <button class="btn btn-info btn-block" type="submit">Create Hero!</button>
                 </div>
             </div>
@@ -301,5 +304,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+    <script src="/JavaScript/CreateHero.js"></script>
 </body>
 </html>
