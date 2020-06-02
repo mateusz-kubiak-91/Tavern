@@ -14,16 +14,25 @@ body {
 }
 
 .left-top {
+<<<<<<< HEAD
   height: 45%;
+=======
+  height: 45vh;
+>>>>>>> e7399d4c683e5c2524092f35405bc7c026de81e7
   width: 100vw;
 }
 
 .left-bottom {
+<<<<<<< HEAD
   overflow-y: scroll;
   top: 20px;
   height: 55%;
   width: 100vw;
   text-align: center;
+=======
+  height: 55vh;
+  width: 100vw;
+>>>>>>> e7399d4c683e5c2524092f35405bc7c026de81e7
 }
 
 .right-player {
