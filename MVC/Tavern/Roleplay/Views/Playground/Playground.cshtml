@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/edc645413f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="~/css/Playground.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-3">
+                <div class="row">
+                    <div class="col-12 left-top text-center">
+                        <form action="post" class="DiceForm m-auto">
+                            <label for="DiceType">Dice type</label>
+                            <div class="row">
+
+                                <div class="col-sm-12 col-md-12 col-lg-6 form-group">
+                                    <select name="diceType" id="DiceType" class="form-control" required>
+                                        <option value="2">D2</option>
+                                        <option value="4">D4</option>
+                                        <option value="6">D6</option>
+                                        <option value="8">D8</option>
+                                        <option value="10">D10</option>
+                                        <option value="12">D12</option>
+                                        <option value="20">D20</option>
+                                        <option value="100">D100</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-6 form-group">
+                                    <select name="diceAmount" id="diceAmount" class="diceAmount form-control" required>
+                                        <option value="1">x1</option>
+                                        <option value="2">x2</option>
+                                        <option value="3">x3</option>
+                                        <option value="4">x4</option>
+                                        <option value="5">x5</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="Modificator">Modificator</label>
+                                        <input type="number" class="modificator form-control" required min="-50" max="50" value="0">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="Test">Test</label>
+                                        <select name="Test" id="Test" class="test form-control" required>
+                                            <option value="None" selected>None</option>
+                                            <option value="Attack">Attack WS</option>
+                                            <option value="Shot">Shot BS</option>
+                                            <option value="Deffence">Dodge WS</option>
+                                            <option value="Gossip">Gossip WP</option>
+                                            <option value="Perceptivity">Perceptivity INT</option>
+                                            <option value="Intimidation">Intimidation S</option>
+                                            <option value="Drinking God">Drinking God T</option>
+                                            <option value="Sneaking">Sneaking AG</option>
+                                            <option value="Bargain">Bargain FEL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <button type="button" class="p-2 my-2 btn-danger back btn btn-outline-dark">Go back!</button>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <button type="button" class="p-2 my-2 go btn btn-success btn-outline-dark">Roll the dice!</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 DYSPLAY-1 left-bottom">
+                        <div id="result" class="h6 result-all"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-9 text-center">
+                <div class="row">
+                    <div class="right-player">
+                        <table class="col-sm-12 col-md-12 col-lg-12">
+                            <thead>
+                                <h1 class="DYSPLAY-1">Hero Name</h1>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Gender:
+                                    </td>
+                                    <td>
+                                        aaaa
+                                    </td>
+                                    <td>
+                                        Race:
+                                    </td>
+                                    <td>
+                                        bbbbb
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Profession:
+                                    </td>
+                                    <td>
+                                        ccccc
+                                    </td>
+                                    <td>
+                                        Age:
+                                    </td>
+                                    <td>
+                                        ddddd
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-6 right-equ">
+                        <table>
+                            <thead>
+                                <p>equipment</p>
+                            </thead>
+                            <tbody>
+                                <p>1</p>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6 right-skills">
+                        <table>
+                            <thead>
+                                <p>skills</p>
+                            </thead>
+                            <tbody>
+                                <p>1</p>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                        <table class="table table-warning table-striped table-borderless table-hover table-sm">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="row" colspan="9">Statistic</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" title="Attribute">Trait</th>
+                                    <th scope="col" title="Wepon Skill">WS</th>
+                                    <th scope="col" title="Ballistic Skill">BS</th>
+                                    <th scope="col" title="Strength">S</th>
+                                    <th scope="col" title="Toughness">T</th>
+                                    <th scope="col" title="Agility">AG</th>
+                                    <th scope="col" title="Intelligence">INT</th>
+                                    <th scope="col" title="Will Power">WP</th>
+                                    <th scope="col" title="Fellowship">FEL</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Base</th>
+                                    <td scope="col" class="WS">50</td>
+                                    <td scope="col" class="BS">50</td>
+                                    <td scope="col" class="S">50</td>
+                                    <td scope="col" class="T">50</td>
+                                    <td scope="col" class="AG">50</td>
+                                    <td scope="col" class="INT">50</td>
+                                    <td scope="col" class="WP">50</td>
+                                    <td scope="col" class="FEL">50</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                        <table class="table table-warning table-striped table-borderless table-hover table-sm">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="row" colspan="9">Statistic</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" title="Attribute">Trait</th>
+                                    <th scope="col" title="Attack">A</th>
+                                    <th scope="col" title="Wounds">W</th>
+                                    <th scope="col" title="Strength Bonus">SB</th>
+                                    <th scope="col" title="Toughness Bonus">TB</th>
+                                    <th scope="col" title="Movement">M</th>
+                                    <th scope="col" title="Magic">MAG</th>
+                                    <th scope="col" title="Insanity Points">IP</th>
+                                    <th scope="col" title="Fate Points">FP</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Base</th>
+                                    <td scope="col"></td>
+                                    <td scope="col"></td>
+                                    <td scope="col"></td>
+                                    <td scope="col"></td>
+                                    <td scope="col"></td>
+                                    <td scope="col"></td>
+                                    <td scope="col"></td>
+                                    <td scope="col"></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="/JavaScript/Playground.js"></script>
+</body>
+</html>

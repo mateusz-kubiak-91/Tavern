@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateHero</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/edc645413f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="~/css/CreateHero.css">
+</head>
+<body>
+
+    <div class="container">
+        <form action="post" class="p-3">
+            <div class="row p-2">
+                <div class="col-12">
+                    <label for="Test">Name</label>
+                    <input type="text" class="form-control" placeholder="Set hero name!" required min="2" max="20">
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <label for="Test">Gender</label>
+                    <select name="Gender" id="Gender" class="form-control" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <label for="Test">Race</label>
+                    <select name="Race" id="Race" class="form-control race" required>
+                        <option value="Human">Human</option>
+                        <option value="Elf">Elf</option>
+                        <option value="Dwarf">Dwarf</option>
+                        <option value="Halfling">Halfling</option>
+                    </select>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <label for="Test">Age</label>
+                    <input type="number" class="form-control" required min="15" max="100">
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                    <label for="Test">Profession</label>
+                    <select name="Profession" id="Profession" class="form-control" required>
+                        <option value="Fieldwarden">Fieldwarden</option>
+                        <option value="InnKeeper">InnKeeper</option>
+                        <option value="Bard">Bard</option>
+                        <option value="Hunter">Hunter</option>
+                        <option value="Mainer">Mainer</option>
+                        <option value="Bully">Bully</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-sm-12 col-md-6 col-lg-6 p-4">
+                    <table class="col">
+                        <thead>
+                            <p>Equipment</p>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="item-1">
+                                        <label class="custom-control-label" for="item-1">Abacus</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="item-2">
+                                        <label class="custom-control-label" for="item-2">Lock-picks</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="item-3">
+                                        <label class="custom-control-label" for="item-3">Brass knuckles</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="item-4">
+                                        <label class="custom-control-label" for="item-4">10gc</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="item-5">
+                                        <label class="custom-control-label" for="item-5">Lantern</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="item-6">
+                                        <label class="custom-control-label" for="item-6">Pickaxe</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="item-7">
+                                        <label class="custom-control-label" for="item-7">Bow and 10 arrows</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="item-8">
+                                        <label class="custom-control-label" for="item-8">Snare</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="item-9">
+                                        <label class="custom-control-label" for="item-9">Musical Instrument</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="item-10">
+                                        <label class="custom-control-label" for="item-10">Writing material</label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 p-4">
+                    <table class="col">
+                        <thead>
+                            <p>Skills</p>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="skill-1">
+                                        <label class="custom-control-label" for="skill-1">Lock-picking</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="skill-2">
+                                        <label class="custom-control-label" for="skill-2">Reading and Writing</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="skill-3">
+                                        <label class="custom-control-label" for="skill-3">Survival</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="skill-4">
+                                        <label class="custom-control-label" for="skill-4">Craft: Maining</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="skill-5">
+                                        <label class="custom-control-label" for="skill-5">Bargain</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="skill-6">
+                                        <label class="custom-control-label" for="skill-6">Sneaking</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="skill-7">
+                                        <label class="custom-control-label" for="skill-7">Drinking God</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="skill-8">
+                                        <label class="custom-control-label" for="skill-8">Intimidation</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="skill-9">
+                                        <label class="custom-control-label" for="skill-9">Perceptivity</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="skill-10">
+                                        <label class="custom-control-label" for="skill-10">Gossip</label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <table class="col text-center table table-dark table-striped table-borderless table-hover table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="row" colspan="9">Statistic</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" title="Attribute">Trait</th>
+                                <th scope="col" title="Wepon Skill">WS</th>
+                                <th scope="col" title="Ballistic Skill">BS</th>
+                                <th scope="col" title="Strength">S</th>
+                                <th scope="col" title="Toughness">T</th>
+                                <th scope="col" title="Agility">AG</th>
+                                <th scope="col" title="Intelligence">INT</th>
+                                <th scope="col" title="Will Oiwer">WP</th>
+                                <th scope="col" title="Fellowship">FEL</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Base</th>
+                                <td scope="col" class="WS"></td>
+                                <td scope="col" class="BS"></td>
+                                <td scope="col" class="S"></td>
+                                <td scope="col" class="T"></td>
+                                <td scope="col" class="AG"></td>
+                                <td scope="col" class="INT"></td>
+                                <td scope="col" class="WP"></td>
+                                <td scope="col" class="FEL"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <table class="table col text-center table-dark table-striped table-borderless table-hover table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="row" colspan="9">Statistic</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" title="Attribute">Trait</th>
+                                <th scope="col" title="Attack">A</th>
+                                <th scope="col" title="Wounds">W</th>
+                                <th scope="col" title="Strength Bonus">SB</th>
+                                <th scope="col" title="Toughness Bonus">TB</th>
+                                <th scope="col" title="Movement">M</th>
+                                <th scope="col" title="Magic">MAG</th>
+                                <th scope="col" title="Insanity Points">IP</th>
+                                <th scope="col" title="Fate Points">FP</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Base</th>
+                                <td scope="col" class="A"></td>
+                                <td scope="col" class="W"></td>
+                                <td scope="col" class="SB"></td>
+                                <td scope="col" class="TB"></td>
+                                <td scope="col" class="M"></td>
+                                <td scope="col" class="MAG"></td>
+                                <td scope="col" class="IP"></td>
+                                <td scope="col" class="FP"></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-sm-6 col-md-3 col-lg-2 p-4">
+                    <button class="btn btn-danger btn-block" type="button">Go back!</button>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-5 p-4">
+                    <button class="btn btn-info btn-block run" type="button">Random statistic</button>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-5 p-4">
+                    <button class="btn btn-success btn-block" type="submit">Create Hero!</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="/JavaScript/CreateHero.js"></script>
+</body>
+</html>

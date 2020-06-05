@@ -24,14 +24,14 @@
 
                                     <div class="col-sm-12 col-md-12 col-lg-6 form-group">
                                         <select name="diceType" id="DiceType" class="form-control" required>
-                                            <option value="2">K2</option>
-                                            <option value="4">K4</option>
-                                            <option value="6">K6</option>
-                                            <option value="8">K8</option>
-                                            <option value="10">K10</option>
-                                            <option value="12">K12</option>
-                                            <option value="20">K20</option>
-                                            <option value="100">K100</option>
+                                            <option value="2">D2</option>
+                                            <option value="4">D4</option>
+                                            <option value="6">D6</option>
+                                            <option value="8">D8</option>
+                                            <option value="10">D10</option>
+                                            <option value="12">D12</option>
+                                            <option value="20">D20</option>
+                                            <option value="100">D100</option>
                                         </select>
                                     </div>
                                     <div class="col-sm-12 col-md-12 col-lg-6 form-group">
@@ -71,8 +71,11 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-12 col-md-12 col-lg-12">
-                                    <button type="button" class="go btn btn-outline-dark">Roll the dice!</button>
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <button type="button" class="p-2 my-2 btn-danger back btn btn-outline-dark">Go back!</button>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <button type="button" class="p-2 my-2 go btn btn-success btn-outline-dark">Roll the dice!</button>
                                 </div>
                             </div>
                         </form>
@@ -81,7 +84,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 DYSPLAY-1 left-bottom">
-                        <div id="result" class="h5 result-all"></div>
+                        <div id="result" class="h6 result-all"></div>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,46 +12,28 @@
 <body>
     <div class="container">
         <div class="row">   
-            <div class="column col-sm-12 col-md-12 col-lg-6 text-center my-auto">
-                <button class="btn btn-info">Create new hero</button>
-            </div>
-            <div class="column col-sm-12 col-md-12 col-lg-6 text-center my-auto">
-                <button class="btn btn-info">Create new adventure</button>
-            </div>
-        </div>
-        <div class="row">   
-            <div class="column col-sm-12 col-md-12 col-lg-6 my-auto">
+            <div class="column col-sm-12 col-md-3 col-lg-3 my-auto"></div>
+            <div class="column col-sm-12 col-md-6 col-lg-6 my-auto">
                 <form class="text-center" action="#!">
-                        <p class="mb-2">Continue adventure</p>
-                        <label>Chose you hero</label>
+                        <p class="h1 mb-2">Continue adventure</p>
+                        <label class="h2">Chose you hero</label>
                         <select class="browser-default custom-select mb-4">
                             <option value="1" selected>Feedback</option>
                             <option value="2">Report a bug</option>
                             <option value="3">Feature request</option>
                             <option value="4">Feature request</option>
-                        </select>
-                        <label>Chose adventure</label>
-                        <select class="browser-default custom-select mb-2">
-                            <option value="1" selected>Feedback</option>
-                            <option value="2">Report a bug</option>
-                            <option value="3">Feature request</option>
-                            <option value="4">Feature request</option>
-                        </select>                      
+                        </select>             
                     <button class="btn btn-info" type="submit">Go</button>
                 </form>
             </div>
-            <div class="column col-sm-12 col-md-12 col-lg-6 my-auto">
-                <form class="text-center" action="#!">
-                    <p class="mb-2">Continue the Master's Plan</p>
-                    <label>Chose you game</label>
-                    <select class="browser-default custom-select mb-2">
-                        <option value="1" selected>Feedback</option>
-                        <option value="2">Report a bug</option>
-                        <option value="3">Feature request</option>
-                        <option value="4">Feature request</option>
-                    </select>                
-                    <button class="btn btn-info " type="submit">Go</button>
-                </form>
+            <div class="column col-sm-12 col-md-3 col-lg-3 my-auto"></div>
+        </div>
+        <div class="row">   
+            <div class="column col-sm-12 col-md-12 col-lg-6 text-center my-auto">
+                <button class="btn btn-danger">Log out</button>
+            </div>
+            <div class="column col-sm-12 col-md-12 col-lg-6 text-center my-auto">
+                <button class="btn btn-secondary">Create new hero</button>
             </div>
         </div>
     </div>

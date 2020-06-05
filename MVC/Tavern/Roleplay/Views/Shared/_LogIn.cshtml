@@ -1,0 +1,29 @@
+﻿@model LogInViewModel
+
+
+@using (Html.BeginForm("LogIn", "Home", FormMethod.Post))
+{
+    <div class="form-group text-center">
+        @Html.LabelFor(x => x.Login)
+        <br />
+        @Html.TextBoxFor(x => x.Login, new {placeholder = "Enter Login"})
+        <br />
+    </div>
+    <div class="form-group text-center">
+        @Html.LabelFor(x => x.Password)
+        <br />
+        @Html.PasswordFor(x => x.Password, new {placeholder = "Enter Password"})
+        <br />
+    </div>
+    <div class="form-group text-center">
+        @Html.LabelFor(x => x.RememberMe)
+        <br />
+        @Html.CheckBoxFor(x => x.RememberMe)
+    </div>
+    <div class="form-group text-center">
+        <button class="btn btn-dark">Log In</button>
+        <br />
+    </div>
+        @Html.ValidationSummary()
+
+ }
