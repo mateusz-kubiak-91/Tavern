@@ -10,8 +10,8 @@ using Roleplay;
 namespace Roleplay.Migrations
 {
     [DbContext(typeof(EFCContext))]
-    [Migration("20200604211148_nazwaMigracji")]
-    partial class nazwaMigracji
+    [Migration("20200606125110_HeroUserMigration")]
+    partial class HeroUserMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -217,6 +217,146 @@ namespace Roleplay.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Roleplay.Models.HeroModel", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Abacus")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Agility")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Attack")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Ballistic_Skill")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Bargain")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Bow_And_Arow_x10")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Brass_Knuckles")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Craft_Maining")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Drinking_God")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Fate_Points")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Fellowship")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Gender")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Golden_Crown_x10")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Gossip")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Insanity_Points")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Intelligence")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Intimidation")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Lantern")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Lock_Picking")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Lock_Picks")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Magic")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Movement")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Musical_Instrument")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Perceptivity")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Pickaxe")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Profession")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Race")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Reading_and_Writing")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Snare")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Sneaking")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Strength")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Strength_Bonus")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Survival")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Toughness")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Toughness_Bonus")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Wepon_Skill")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Will_Power")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Wounds")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Writing_Material")
+                        .HasColumnType("bit");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Hero");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -266,6 +406,13 @@ namespace Roleplay.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Roleplay.Models.HeroModel", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
                 });
 #pragma warning restore 612, 618
         }

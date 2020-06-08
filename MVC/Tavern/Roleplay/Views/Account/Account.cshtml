@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model List<Roleplay.Models.HeroModel>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,26 +15,26 @@
         <div class="row">
             <div class="column col-sm-12 col-md-3 col-lg-3 my-auto"></div>
             <div class="column col-sm-12 col-md-6 col-lg-6 my-auto">
-                <form class="text-center" action="#!">
+                <form class="text-center" action="/Playground/Playground">
                     <p class="h1 mb-2">Continue adventure</p>
                     <label class="h2">Chose you hero</label>
-                    <select class="browser-default custom-select mb-4">
-                        <option value="1" selected>Feedback</option>
-                        <option value="2">Report a bug</option>
-                        <option value="3">Feature request</option>
-                        <option value="4">Feature request</option>
+                    <select name="Hero" class="browser-default custom-select mb-4">
+                        @foreach (var item in Model)
+                        {
+                        <option value="@item.ID">@item.Name</option>
+                        }
                     </select>
-                    <button class="btn btn-info" type="submit">Go</button>
+                    <button class="btn btn-info">Go</button>
                 </form>
             </div>
             <div class="column col-sm-12 col-md-3 col-lg-3 my-auto"></div>
         </div>
         <div class="row">
             <div class="column col-sm-12 col-md-12 col-lg-6 text-center my-auto">
-                <a href='@Url.Action("LogOut", "AccountController")' class="btn btn-danger">Sign Out</a>
+                <a asp-controller="Account" asp-action="LogOut" class="btn btn-danger">Sign Out</a>
             </div>
             <div class="column col-sm-12 col-md-12 col-lg-6 text-center my-auto">
-                <button class="btn btn-secondary">Create new hero</button>
+                <a asp-controller="Account" asp-action="GoCreateHero" class="btn btn-success">Create new hero</a>
             </div>
         </div>
     </div>

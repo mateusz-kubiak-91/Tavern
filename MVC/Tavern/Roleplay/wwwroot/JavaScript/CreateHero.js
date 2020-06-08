@@ -28,11 +28,43 @@ function randomWoundsFatePoints() {
     const mxx = 11;
     const res = Math.floor(Math.random() * (mxx-mn) + mn);
     return res;
-  }
+}
+
+function updateHiddenInputs() {
+    let mapping = {
+        WS: "Wepon_Skill",
+        BS: "Ballistic_Skill",
+        S: "Strength",
+        T: "Toughness",
+        AG: "Agility",
+        INT: "Intelligence",
+        WP: "Will_Power",
+        FEL: "Fellowship",
+        A: "Attack",
+        W: "Wounds",
+        SB: "Strength_Bonus",
+        TB: "Toughness_Bonus",
+        M: "Movement",
+        MAG: "Magic",
+        IP: "Insanity_Points",
+        FP: "Fate_Points",
+    }
+    let hiddenInputs = document.querySelectorAll('.hidden');
+    console.log(hiddenInputs);
+    for (let input of hiddenInputs) {
+        let className = input.classList[0];
+        let newInput = document.createElement('input');
+        newInput.type = "hidden";
+        newInput.value = input.innerHTML;
+        newInput.name = mapping[className];
+        input.appendChild(newInput);
+    }
+};
 
 console.log(strength.innerHTML);
 
-randomBtn.addEventListener('click', function (){
+randomBtn.addEventListener('click', function (event) {
+    event.preventDefault();
     switch (race.value) {
         case 'Dwarf':
             weponSkill.innerHTML = randomStatistic() + 30;
@@ -194,6 +226,7 @@ randomBtn.addEventListener('click', function (){
             } else if (randomWoundsFatePoints() <= 10 && randomWoundsFatePoints() >= 8) {
                 fatePoint.innerHTML = 3;
             }
-        break;
+            break;
     }
+    updateHiddenInputs();
 });

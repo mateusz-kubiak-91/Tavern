@@ -6,33 +6,61 @@
 }
 
 body {
-  text-transform: uppercase;
-  font-family: sans-serif;
-  font-size: 15px;
-  color: black;
-  background-color: #D7AB78;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: black;
+    background-color: #D7AB78;
+    overflow-x: hidden;
+}
+
+.hero-name {
+    margin-bottom: 1rem;
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.basic-type {
+    margin: 5px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.title {
+    padding: 10px;
+}
+
+.basicChoise {
+    margin: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 .left-top {
-  height: 45vh;
-  width: 100vw;
+    height: 55vh;
+    width: 100vw;
+    font-weight: 700;
 }
 
 .left-bottom {
-  overflow-y: scroll;
-  height: 55vh;
-  width: 100vw;
-  text-align: center;
+    overflow-y: scroll;
+    height: 45vh;
+    width: 100vw;
+    text-align: center;
+    font-weight: 700;
 }
 
 .right-player {
-  height: 15vh;
-  width: 100vw;
+    height: 15vh;
+    width: 100vw;
+    margin: 20px;
 }
 
 .right-equ, .right-skills {
-  height: 60vh;
-  width: 100vw;
+    top: 60px;
+    line-height: 20px;
+    height: 65vh;
+    width: 100vw;
 }
 
 .right-stats {

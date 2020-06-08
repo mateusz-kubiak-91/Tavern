@@ -1,4 +1,4 @@
-﻿@model Roleplay.Models.HeroModel
+@model Roleplay.Models.HeroModel
 <!DOCTYPE html>
 <html lang="en">
 
@@ -94,65 +94,61 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 right-player">
                         <h1 class="DYSPLAY-1 hero-name">@Model.Name</h1>
                         <div class="row">
-                            <div class="col-sm-3 col-md-3 col-lg-2"></div>
-                                <table class="col-sm-6 col-md-6 col-lg-8">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <P class="basic-type">
-                                                    Gender:
-                                                </P>
-                                            </td>
-                                            <td>
-                                                <p class="basicChoise">
-                                                    @Model.Gender
-                                                </p>
-                                            </td>
-                                            <td>
-                                                <p class="basic-type">
-                                                    Race:
-                                                </p>
-                                            </td>
-                                            <td>
-                                                <p class="basicChoise">
-                                                    @Model.Race
-                                                </p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <P class="basic-type">
-                                                    Profession:
-                                                </P>
-                                            </td>
-                                            <td>
-                                                <p class="basicChoise">
-                                                    @Model.Profession
-                                                </p>
-                                            </td>
-                                            <td>
-                                                <p class="basic-type">
-                                                    Age:
-                                                </p>
-                                            </td>
-                                            <td>
-                                                <p class="basicChoise">
-                                                    @Model.Age
-                                                </p>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            <div class="col-sm-3 col-md-3 col-lg-2"></div>
+                            <div class="col-sm-12 col-md-6 col-lg-2"></div>
+                            <div class="col-sm-12 col-md-6 col-lg-2">
+                                <P class="basic-type">
+                                    Gender:
+                                </P>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-2">
+                                <p class="basicChoise">
+                                    @Model.Gender
+                                </p>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-2">
+                                <p class="basic-type">
+                                    Race:
+                                </p>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-2">
+                                <p class="basicChoise">
+                                    @Model.Race
+                                </p>
+                            </div>    
+                            <div class="col-sm-12 col-md-6 col-lg-2"></div>
                         </div>
-                        
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-2"></div>
+                            <div class="col-sm-12 col-md-6 col-lg-2">
+                                <P class="basic-type">
+                                    Profession:
+                                </P>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-2">
+                                <p class="basicChoise">
+                                    @Model.Profession
+                                </p>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-2">
+                                <p class="basic-type">
+                                    Age:
+                                </p>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-2">
+                                <p class="basicChoise">
+                                    @Model.Age
+                                </p>
+                            </div>    
+                            <div class="col-sm-12 col-md-6 col-lg-2"></div>
+                        </div>
+
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6 right-equ text-center">
                         <table>
                             <thead>
-                                <p class="basic-type title">equipment</p>
+                                <p class="basic-type">equipment</p>
                             </thead>
                             <tbody class="basicChoise">
                                 @if (Model.Abacus)
@@ -201,7 +197,7 @@
                     <div class="col-sm-12 col-md-12 col-lg-6 right-skills">
                         <table>
                             <thead>
-                                <p class="basic-type title">skills</p>
+                                <p class="basic-type">skills</p>
                             </thead>
                             <tbody class="basicChoise">
                                 @if (Model.Lock_Picking)

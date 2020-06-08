@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Roleplay.Migrations
 {
-    public partial class nazwaMigracji : Migration
+    public partial class HeroUserMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -152,6 +152,66 @@ namespace Roleplay.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Hero",
+                columns: table => new
+                {
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(nullable: true),
+                    Gender = table.Column<string>(nullable: true),
+                    Race = table.Column<string>(nullable: true),
+                    Age = table.Column<int>(nullable: false),
+                    Profession = table.Column<string>(nullable: true),
+                    Abacus = table.Column<bool>(nullable: false),
+                    Lock_Picks = table.Column<bool>(nullable: false),
+                    Brass_Knuckles = table.Column<bool>(nullable: false),
+                    Golden_Crown_x10 = table.Column<bool>(nullable: false),
+                    Lantern = table.Column<bool>(nullable: false),
+                    Pickaxe = table.Column<bool>(nullable: false),
+                    Bow_And_Arow_x10 = table.Column<bool>(nullable: false),
+                    Snare = table.Column<bool>(nullable: false),
+                    Musical_Instrument = table.Column<bool>(nullable: false),
+                    Writing_Material = table.Column<bool>(nullable: false),
+                    Lock_Picking = table.Column<bool>(nullable: false),
+                    Reading_and_Writing = table.Column<bool>(nullable: false),
+                    Survival = table.Column<bool>(nullable: false),
+                    Craft_Maining = table.Column<bool>(nullable: false),
+                    Bargain = table.Column<bool>(nullable: false),
+                    Sneaking = table.Column<bool>(nullable: false),
+                    Drinking_God = table.Column<bool>(nullable: false),
+                    Intimidation = table.Column<bool>(nullable: false),
+                    Perceptivity = table.Column<bool>(nullable: false),
+                    Gossip = table.Column<bool>(nullable: false),
+                    Wepon_Skill = table.Column<int>(nullable: false),
+                    Ballistic_Skill = table.Column<int>(nullable: false),
+                    Strength = table.Column<int>(nullable: false),
+                    Toughness = table.Column<int>(nullable: false),
+                    Agility = table.Column<int>(nullable: false),
+                    Intelligence = table.Column<int>(nullable: false),
+                    Will_Power = table.Column<int>(nullable: false),
+                    Fellowship = table.Column<int>(nullable: false),
+                    Attack = table.Column<int>(nullable: false),
+                    Wounds = table.Column<int>(nullable: false),
+                    Strength_Bonus = table.Column<int>(nullable: false),
+                    Toughness_Bonus = table.Column<int>(nullable: false),
+                    Movement = table.Column<int>(nullable: false),
+                    Magic = table.Column<int>(nullable: false),
+                    Insanity_Points = table.Column<int>(nullable: false),
+                    Fate_Points = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Hero", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_Hero_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -190,6 +250,11 @@ namespace Roleplay.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Hero_UserId",
+                table: "Hero",
+                column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -208,6 +273,9 @@ namespace Roleplay.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Hero");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

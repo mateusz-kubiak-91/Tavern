@@ -27,7 +27,7 @@ using Microsoft.AspNetCore.Identity;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"eef7bd8e2954c34b5cb402414e91d86c50d0bde2", @"/Views/Shared/_LogIn.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"74724fcda7c00c5cbfee963d9910877670a54f46", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"83eb603be05417325ccfa196ee7c2ae1f8e29c20", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__LogIn : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<LogInViewModel>
     {
         #pragma warning disable 1998

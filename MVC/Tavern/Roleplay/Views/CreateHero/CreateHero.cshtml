@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model HeroModel
+
+<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -12,11 +14,11 @@
 <body>
 
     <div class="container">
-        <form action="post" class="p-3">
+        <form method="post" class="p-3">
             <div class="row p-2">
                 <div class="col-12">
                     <label for="Test">Name</label>
-                    <input type="text" class="form-control" placeholder="Set hero name!" required min="2" max="20">
+                    <input type="text" name="Name" class="form-control" placeholder="Set hero name!" required min="2" max="20">
                 </div>
             </div>
             <div class="row p-2">
@@ -38,7 +40,7 @@
                 </div>
                 <div class="col-sm-12 col-md-3 col-lg-3">
                     <label for="Test">Age</label>
-                    <input type="number" class="form-control" required min="15" max="100">
+                    <input type="number" name="Age" class="form-control" required min="15" max="100">
                 </div>
                 <div class="col-sm-12 col-md-3 col-lg-3">
                     <label for="Test">Profession</label>
@@ -62,13 +64,13 @@
                             <tr>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="item-1">
+                                        <input asp-for="Abacus" type="checkbox" name="Abacus" class="custom-control-input" id="item-1">
                                         <label class="custom-control-label" for="item-1">Abacus</label>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="item-2">
+                                        <input asp-for="Lock_Picks" type="checkbox" name="Lock_Picks" class="custom-control-input" id="item-2">
                                         <label class="custom-control-label" for="item-2">Lock-picks</label>
                                     </div>
                                 </td>
@@ -76,13 +78,13 @@
                             <tr>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="item-3">
+                                        <input asp-for="Brass_Knuckles" type="checkbox" name="Brass_Knuckles" class="custom-control-input" id="item-3">
                                         <label class="custom-control-label" for="item-3">Brass knuckles</label>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="item-4">
+                                        <input asp-for="Golden_Crown_x10" type="checkbox" name="Golden_Crown_x10" class="custom-control-input" id="item-4">
                                         <label class="custom-control-label" for="item-4">10gc</label>
                                     </div>
                                 </td>
@@ -90,13 +92,13 @@
                             <tr>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="item-5">
+                                        <input asp-for="Lantern" type="checkbox" name="Lantern" class="custom-control-input" id="item-5">
                                         <label class="custom-control-label" for="item-5">Lantern</label>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="item-6">
+                                        <input asp-for="Pickaxe" type="checkbox" name="Pickaxe" class="custom-control-input" id="item-6">
                                         <label class="custom-control-label" for="item-6">Pickaxe</label>
                                     </div>
                                 </td>
@@ -104,13 +106,13 @@
                             <tr>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="item-7">
+                                        <input asp-for="Bow_And_Arow_x10" type="checkbox" name="Bow_And_Arow_x10" class="custom-control-input" id="item-7">
                                         <label class="custom-control-label" for="item-7">Bow and 10 arrows</label>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="item-8">
+                                        <input asp-for="Snare" type="checkbox" name="Snare" class="custom-control-input" id="item-8">
                                         <label class="custom-control-label" for="item-8">Snare</label>
                                     </div>
                                 </td>
@@ -118,13 +120,13 @@
                             <tr>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="item-9">
+                                        <input asp-for="Musical_Instrument" type="checkbox" name="Musical_Instrument" class="custom-control-input" id="item-9">
                                         <label class="custom-control-label" for="item-9">Musical Instrument</label>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="item-10">
+                                        <input asp-for="Writing_Material" type="checkbox" name="Writing_Material" class="custom-control-input" id="item-10">
                                         <label class="custom-control-label" for="item-10">Writing material</label>
                                     </div>
                                 </td>
@@ -141,13 +143,13 @@
                             <tr>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="skill-1">
+                                        <input asp-for="Lock_Picking" type="checkbox" name="Lock_Picking" class="custom-control-input" id="skill-1">
                                         <label class="custom-control-label" for="skill-1">Lock-picking</label>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="skill-2">
+                                        <input asp-for="Reading_and_Writing" type="checkbox" name="Reading_and_Writing" class="custom-control-input" id="skill-2">
                                         <label class="custom-control-label" for="skill-2">Reading and Writing</label>
                                     </div>
                                 </td>
@@ -155,13 +157,13 @@
                             <tr>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="skill-3">
+                                        <input asp-for="Survival" type="checkbox" name="Survival" class="custom-control-input" id="skill-3">
                                         <label class="custom-control-label" for="skill-3">Survival</label>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="skill-4">
+                                        <input asp-for="Craft_Maining" type="checkbox" name="Craft_Maining" class="custom-control-input" id="skill-4">
                                         <label class="custom-control-label" for="skill-4">Craft: Maining</label>
                                     </div>
                                 </td>
@@ -169,13 +171,13 @@
                             <tr>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="skill-5">
+                                        <input asp-for="Bargain" type="checkbox" name="Bargain" class="custom-control-input" id="skill-5">
                                         <label class="custom-control-label" for="skill-5">Bargain</label>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="skill-6">
+                                        <input asp-for="Sneaking" type="checkbox" name="Sneaking" class="custom-control-input" id="skill-6">
                                         <label class="custom-control-label" for="skill-6">Sneaking</label>
                                     </div>
                                 </td>
@@ -183,13 +185,13 @@
                             <tr>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="skill-7">
+                                        <input asp-for="Drinking_God" type="checkbox" name="Drinking_God" class="custom-control-input" id="skill-7">
                                         <label class="custom-control-label" for="skill-7">Drinking God</label>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="skill-8">
+                                        <input asp-for="Intimidation" type="checkbox" name="Intimidation" class="custom-control-input" id="skill-8">
                                         <label class="custom-control-label" for="skill-8">Intimidation</label>
                                     </div>
                                 </td>
@@ -197,13 +199,13 @@
                             <tr>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="skill-9">
+                                        <input asp-for="Perceptivity" type="checkbox" name="Perceptivity" class="custom-control-input" id="skill-9">
                                         <label class="custom-control-label" for="skill-9">Perceptivity</label>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="skill-10">
+                                        <input asp-for="Gossip" type="checkbox" name="Gossip" class="custom-control-input" id="skill-10">
                                         <label class="custom-control-label" for="skill-10">Gossip</label>
                                     </div>
                                 </td>
@@ -234,14 +236,14 @@
                             </tr>
                             <tr>
                                 <th scope="row">Base</th>
-                                <td scope="col" class="WS"></td>
-                                <td scope="col" class="BS"></td>
-                                <td scope="col" class="S"></td>
-                                <td scope="col" class="T"></td>
-                                <td scope="col" class="AG"></td>
-                                <td scope="col" class="INT"></td>
-                                <td scope="col" class="WP"></td>
-                                <td scope="col" class="FEL"></td>
+                                <td scope="col" class="WS hidden"></td>
+                                <td scope="col" class="BS hidden"></td>
+                                <td scope="col" class="S hidden"></td>
+                                <td scope="col" class="T hidden"></td>
+                                <td scope="col" class="AG hidden"></td>
+                                <td scope="col" class="INT hidden"></td>
+                                <td scope="col" class="WP hidden"></td>
+                                <td scope="col" class="FEL hidden"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -267,14 +269,14 @@
                             </tr>
                             <tr>
                                 <th scope="row">Base</th>
-                                <td scope="col" class="A"></td>
-                                <td scope="col" class="W"></td>
-                                <td scope="col" class="SB"></td>
-                                <td scope="col" class="TB"></td>
-                                <td scope="col" class="M"></td>
-                                <td scope="col" class="MAG"></td>
-                                <td scope="col" class="IP"></td>
-                                <td scope="col" class="FP"></td>
+                                <td scope="col" class="A hidden"></td>
+                                <td scope="col" class="W hidden"></td>
+                                <td scope="col" class="SB hidden"></td>
+                                <td scope="col" class="TB hidden"></td>
+                                <td scope="col" class="M hidden"></td>
+                                <td scope="col" class="MAG hidden"></td>
+                                <td scope="col" class="IP hidden"></td>
+                                <td scope="col" class="FP hidden"></td>
                             </tr>
 
                         </tbody>
@@ -283,7 +285,8 @@
             </div>
             <div class="row p-2">
                 <div class="col-sm-6 col-md-3 col-lg-2 p-4">
-                    <button class="btn btn-danger btn-block" type="button">Go back!</button>
+                    
+                    <a asp-controller="CreateHero" asp-action="GoBack" class="btn btn-danger">Go Back</a>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-5 p-4">
                     <button class="btn btn-info btn-block run" type="button">Random statistic</button>

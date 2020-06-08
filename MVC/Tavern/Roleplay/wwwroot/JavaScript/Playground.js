@@ -1,5 +1,6 @@
 const dice = document.querySelector('.form-control');
 const rAll = document.querySelector('.result-all');
+const leftBottom = document.querySelector('.left-bottom');
 const goBtn = document.querySelector('.go');
 const modif = document.querySelector('.modificator');
 const amount = document.querySelector('.amount');
@@ -41,6 +42,7 @@ const diceAmount = document.querySelector('.diceAmount');
     newEl.classList.add('single-result');
     newEl.style.color = color;
     rAll.appendChild(newEl);
+    leftBottom.scrollTop = rAll.scrollHeight;
   }
 
 goBtn.addEventListener('click', function() {
